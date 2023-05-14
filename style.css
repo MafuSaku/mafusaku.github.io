@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #FF0000;
+    /* Define a variable for the primary color */
+    --secondary-color: #00FF00;
+    /* Define a variable for the secondary color */
+    --background-color: #000000;
+    /* Define a variable for the background color */
+    --text-color: #ffffff;
+    /* Define a variable for the text color */
+    --header-font-family: "Gotham Black", Arial, sans-serif;
+    /* Define a variable for the header font family */
+    --body-font-family: "Gotham Book", Arial, sans-serif;
+    /* Define a variable for the body font family */
+    --primary-button-color: #7979ff;
+    /* Define a variable for the primary button color */
+    --secondary-button-color: #ff8282;
+    /* Define a variable for the secondary button color */
+    --button-hover-color: #2e2e8a;
+    /* Define a variable for the button hover color */
+    --accent-color: #ff8ac5;
+    /* Define a variable for the accent color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font-family);
+    /* Use the header font family variable for the font family */
+    color: var(--text-color);
+    /* Use the secondary color for heading text color */
+    color: #5a5af6;
+}
+
+body {
+    font-family: var(--body-font-family);
+    /* Use the body font family variable for the font family */
+    background-color: var(--background-color);
+    /* Use the primary color as the background color */
+    color: var(--text-color);
+    /* Use the text color for the font color */
+}
+
+a {
+    color: #8bd6f2;
+    /* Use the text color for the link color */
+}
+
+primary-rounded-button {
+    background-color: var(--primary-button-color);
+    /* Use the primary button color for the background color */
+    color: var(--text-color);
+    /* Use the text color for the font color */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;  /* Add a smooth transition effect */
+}
+
+primary-rounded-button:hover {
+    background-color: var(--button-hover-color);
+    /* Use the button hover color for the background color */
+    color: var(--text-color);
+    /* Use the text color for the font color */
+}
+
+secondary-rounded-button {
+    background-color: var(--secondary-button-color);
+    /* Use the secondary button color for the background color */
+    color: var(--text-color);
+    /* Use the text color for the font color */
+}
+
+secondary-rounded-button:hover {
+    background-color: var(--button-hover-color);
+    /* Use the button hover color for the background color */
+    color: var(--text-color);
+    /* Use the text color for the font color */
+}
