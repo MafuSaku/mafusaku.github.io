@@ -1,3 +1,12 @@
+*{
+    padding: 0;
+    /* Remove the default padding */
+}
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #FF0000;
     /* Define a variable for the primary color */
@@ -26,12 +35,20 @@ h1, h2, h3, h4, h5, h6 {
     /* Use the header font family variable for the font family */
     color: var(--text-color);
     /* Use the secondary color for heading text color */
-    color: #5a5af6;
+    /* color: #5a5af6; */
 }
 
 body {
     font-family: var(--body-font-family);
     /* Use the body font family variable for the font family */
+    font-size: 1.25rem;
+    /* Set the base font size to 20px */
+    line-height: 1.5;
+    /* Set the line height to 1.5 */
+    margin: 0;
+    /* Remove the default margin */
+    padding: 0;
+    /* Remove the default padding */
     background-color: var(--background-color);
     /* Use the primary color as the background color */
     color: var(--text-color);
@@ -43,7 +60,7 @@ a {
     /* Use the text color for the link color */
 }
 
-primary-rounded-button {
+.primary-rounded-button {
     background-color: var(--primary-button-color);
     /* Use the primary button color for the background color */
     color: var(--text-color);
@@ -62,7 +79,7 @@ primary-rounded-button:hover {
     /* Use the text color for the font color */
 }
 
-secondary-rounded-button {
+.secondary-rounded-button {
     background-color: var(--secondary-button-color);
     /* Use the secondary button color for the background color */
     color: var(--text-color);
@@ -75,3 +92,70 @@ secondary-rounded-button:hover {
     color: var(--text-color);
     /* Use the text color for the font color */
 }
+
+.wrapper {
+    max-width: 50rem;
+    /* Set the max-width to 800px */
+    margin-inline: auto;
+    /* Center the wrapper */
+    padding-inline: 1rem;
+    /* Add some padding to the left and right */
+}
+
+.site-tiitle {
+    font-size: 3rem;
+    /* Set the font size to 48px */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    /* Set the font size to 36px */
+}
+
+section {
+    padding-block: 5rem;
+    /* Add some padding to the top and bottom */
+}
+
+.diagonal {
+    position: relative;
+    background-image:
+        linear-gradient(
+            45deg,
+            #695CFE,
+            #2e2e8a
+        );
+    /* Use a linear gradient for the background image */
+}
+
+.diagonal::after {
+    content: '';
+    background: pink;
+    position: absolute;
+    z-index: -1;
+    /* Place the pseudo-element behind the element */
+    inset: 0;
+    /* Set the position to cover the entire element */
+    transform: skewY(-5deg);
+    /* Skew the pseudo-element by 5 degrees */
+}
+
+.root {
+--body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+}
+
+root.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
